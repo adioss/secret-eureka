@@ -1,6 +1,6 @@
 # Project Title
 
-A brief description of what this project does and who it's for
+Tool to detect secret (AWS, GCP or AZURE keys, NPM tokens etc...)
 
 ## Badges
 
@@ -11,7 +11,7 @@ A brief description of what this project does and who it's for
 
 ## Demo
 
-Insert gif or link to demo
+TODO
 
 ## Usage/Examples
 
@@ -56,7 +56,7 @@ Start
 
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+[TODO](https://linktodocumentation)
 
 ## Contributing
 
