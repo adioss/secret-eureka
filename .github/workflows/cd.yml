@@ -20,6 +20,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Semantic Release
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: |
           pip install python-semantic-release
           git config user.name github-actions

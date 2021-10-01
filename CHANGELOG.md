@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2021-10-01)
+### Feature
+* Publish to pypi ([`8862595`](https://github.com/adioss/secret-eureka/commit/886259513544833338211ecf2baf268951954931))
+
 ## v0.2.1 (2021-10-01)
 ### Fix
 * Lint (use f string format) ([`3b764b2`](https://github.com/adioss/secret-eureka/commit/3b764b2fcfb33c0350c38155e23555651eb374d6))
