@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2021-10-01)
+### Feature
+* Publish to pypi ([`5722380`](https://github.com/adioss/secret-eureka/commit/57223803deaa52b9498f05c2a1fef930938bfd9f))
+
 ## v0.3.0 (2021-10-01)
 ### Feature
 * Publish to pypi ([`8862595`](https://github.com/adioss/secret-eureka/commit/886259513544833338211ecf2baf268951954931))
