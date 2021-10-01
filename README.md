@@ -1,4 +1,4 @@
-# Project Title
+# Secret Eureka
 
 Tool to detect secret (AWS, GCP or AZURE keys, NPM tokens etc...)
 
