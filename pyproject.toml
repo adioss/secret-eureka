@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "secret-eureka"
-version = "0.2.0"
+version = "0.2.1"
 description = "secret-eureka"
 authors = ["adioss <adrien.pailhes@outlook.com>"]
 license = "GPLv3"
