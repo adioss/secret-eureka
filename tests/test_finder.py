@@ -23,7 +23,7 @@ class DefaultFinderTestCase(unittest.TestCase):
             # When
             result = finder.contains_secret_pattern(tested['value'], finder.SecretPattern.AWS_KEY)
             # Then
-            self.assertEqual(result, tested['expected'], "Failed: %s" % tested['value'])
+            self.assertEqual(result, tested['expected'], f"Failed: {tested['value']}")
 
     def test_contains_aws_credential_file_pattern(self):
         """ test """
@@ -36,7 +36,7 @@ class DefaultFinderTestCase(unittest.TestCase):
             # When
             result = finder.contains_secret_pattern(tested['value'], finder.SecretPattern.CREDENTIAL_FILE)
             # Then
-            self.assertEqual(result, tested['expected'], "Failed: %s" % tested['value'])
+            self.assertEqual(result, tested['expected'], f"Failed: {tested['value']}")
 
     def test_contains_aws_secret_pattern(self):
         """ test """
@@ -61,7 +61,7 @@ class DefaultFinderTestCase(unittest.TestCase):
             # When
             result = finder.contains_secret_pattern(tested['value'], finder.SecretPattern.AWS_SECRET)
             # Then
-            self.assertEqual(result, tested['expected'], "Failed: %s" % tested['value'])
+            self.assertEqual(result, tested['expected'], f"Failed: {tested['value']}")
 
     def test_contains_github_key_pattern(self):
         """ test """
@@ -73,7 +73,7 @@ class DefaultFinderTestCase(unittest.TestCase):
             # When
             result = finder.contains_secret_pattern(tested['value'], finder.SecretPattern.GITHUB_KEY)
             # Then
-            self.assertEqual(result, tested['expected'], "Failed: %s" % tested['value'])
+            self.assertEqual(result, tested['expected'], f"Failed: {tested['value']}")
 
     def test_contains_azure_client_secret_pattern(self):
         """ test """
@@ -93,7 +93,7 @@ class DefaultFinderTestCase(unittest.TestCase):
             # When
             result = finder.contains_secret_pattern(tested['value'], finder.SecretPattern.AZURE_CLIENT_ID)
             # Then
-            self.assertEqual(result, tested['expected'], "Failed: %s" % tested['value'])
+            self.assertEqual(result, tested['expected'], f"Failed: {tested['value']}")
 
     def test_contains_npm_token_pattern(self):
         """ test """
@@ -110,4 +110,4 @@ class DefaultFinderTestCase(unittest.TestCase):
             # When
             result = finder.contains_secret_pattern(tested['value'], finder.SecretPattern.NPM_TOKEN)
             # Then
-            self.assertEqual(result, tested['expected'], "Failed: %s" % tested['value'])
+            self.assertEqual(result, tested['expected'], f"Failed: {tested['value']}")
