@@ -5,6 +5,7 @@ Tool to detect secret (AWS, GCP or AZURE keys, NPM tokens etc...)
 ## Badges
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![PyPI version](https://badge.fury.io/py/secret-eureka.svg)](https://badge.fury.io/py/secret-eureka)
 [![ci](https://github.com/adioss/secret-eureka/actions/workflows/ci.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/ci.yml)
 [![cd](https://github.com/adioss/secret-eureka/actions/workflows/cd.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/cd.yml)
 [![security](https://github.com/adioss/secret-eureka/actions/workflows/security.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/security.yml)
