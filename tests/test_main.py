@@ -1,6 +1,6 @@
 import unittest
 
-from python_template.main import any_method
+from secret_eureka.main import any_method
 
 
 class DefaultMainTestCase(unittest.TestCase):

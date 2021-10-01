@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "python-template"
-version = "0.2.0"
-description = "python-template"
+name = "secret-eureka"
+version = "0.0.1"
+description = "secret-eureka"
 authors = ["adioss <adrien.pailhes@outlook.com>"]
 license = "GPLv3"
 
@@ -17,7 +17,7 @@ mypy = "^0.910"
 coverage = "^5.5"
 
 [tool.semantic_release]
-version_variable = ["python_template/__init__.py:__version__", "pyproject.toml:version"]
+version_variable = ["secret_eureka/__init__.py:__version__", "pyproject.toml:version"]
 branch = "main"
 upload_to_pypi = false
 upload_to_release = true

@@ -5,9 +5,9 @@ A brief description of what this project does and who it's for
 ## Badges
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![ci](https://github.com/adioss/python-template/actions/workflows/ci.yml/badge.svg)](https://github.com/adioss/python-template/actions/workflows/ci.yml)
-[![cd](https://github.com/adioss/python-template/actions/workflows/cd.yml/badge.svg)](https://github.com/adioss/python-template/actions/workflows/cd.yml)
-[![security](https://github.com/adioss/python-template/actions/workflows/security.yml/badge.svg)](https://github.com/adioss/python-template/actions/workflows/security.yml)
+[![ci](https://github.com/adioss/secret-eureka/actions/workflows/ci.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/ci.yml)
+[![cd](https://github.com/adioss/secret-eureka/actions/workflows/cd.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/cd.yml)
+[![security](https://github.com/adioss/secret-eureka/actions/workflows/security.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/security.yml)
 
 ## Demo
 
@@ -32,13 +32,13 @@ To run tests, run the following command
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:adioss/secret-eureka.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd secret-eureka
 ```
 
 Install poetry and install dependencies
@@ -51,7 +51,7 @@ Install poetry and install dependencies
 Start
 
 ```bash
-  poetry run python src/main.py 
+  poetry run python secret_eureka/main.py 
 ```
 
 ## Documentation
@@ -72,7 +72,7 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 ## Acknowledgements
 
-- [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- TODO
 
 ## Support
 
