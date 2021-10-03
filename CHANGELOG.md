@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2021-10-03)
+### Feature
+* Rename project (from secret_eureka to unconcealment) ([`a0e7b17`](https://github.com/adioss/secret-eureka/commit/a0e7b1731b8629b8de7151da6f0136bc5f864866))
+
 ## v0.4.0 (2021-10-01)
 ### Feature
 * Publish to pypi ([`5722380`](https://github.com/adioss/unconcealment/commit/57223803deaa52b9498f05c2a1fef930938bfd9f))
