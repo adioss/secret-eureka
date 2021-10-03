@@ -1,6 +1,6 @@
 # Unconcealment
 
-Tool to detect secret (AWS, GCP or AZURE keys, NPM tokens etc...)
+Tool to detect secrets (AWS, GCP or AZURE keys, NPM tokens etc...)
 
 ## Badges
 
