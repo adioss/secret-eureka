@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "secret-eureka"
+name = "unconcealment"
 version = "0.4.0"
-description = "secret-eureka"
+description = "unconcealment"
 authors = ["adioss <adrien.pailhes@outlook.com>"]
 license = "GPLv3"
 
@@ -17,7 +17,7 @@ mypy = "^0.910"
 coverage = "^5.5"
 
 [tool.semantic_release]
-version_variable = ["secret_eureka/__init__.py:__version__", "pyproject.toml:version"]
+version_variable = ["unconcealment/__init__.py:__version__", "pyproject.toml:version"]
 branch = "main"
 upload_to_pypi = true
 upload_to_release = true

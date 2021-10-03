@@ -1,6 +1,6 @@
 from typing import Final
 
-from secret_eureka.secret_pattern import SecretPattern
+from unconcealment.secret_pattern import SecretPattern
 
 MAX_TESTED_LENGTH: Final = 5000
 

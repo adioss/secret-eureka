@@ -1,6 +1,6 @@
 import unittest
 
-from secret_eureka import finder
+from unconcealment import finder
 
 
 class DefaultFinderTestCase(unittest.TestCase):

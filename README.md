@@ -1,14 +1,14 @@
-# Secret Eureka
+# Unconcealment
 
 Tool to detect secret (AWS, GCP or AZURE keys, NPM tokens etc...)
 
 ## Badges
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![PyPI version](https://badge.fury.io/py/secret-eureka.svg)](https://badge.fury.io/py/secret-eureka)
-[![ci](https://github.com/adioss/secret-eureka/actions/workflows/ci.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/ci.yml)
-[![cd](https://github.com/adioss/secret-eureka/actions/workflows/cd.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/cd.yml)
-[![security](https://github.com/adioss/secret-eureka/actions/workflows/security.yml/badge.svg)](https://github.com/adioss/secret-eureka/actions/workflows/security.yml)
+[![PyPI version](https://badge.fury.io/py/unconcealment.svg)](https://badge.fury.io/py/unconcealment)
+[![ci](https://github.com/adioss/unconcealment/actions/workflows/ci.yml/badge.svg)](https://github.com/adioss/unconcealment/actions/workflows/ci.yml)
+[![cd](https://github.com/adioss/unconcealment/actions/workflows/cd.yml/badge.svg)](https://github.com/adioss/unconcealment/actions/workflows/cd.yml)
+[![security](https://github.com/adioss/unconcealment/actions/workflows/security.yml/badge.svg)](https://github.com/adioss/unconcealment/actions/workflows/security.yml)
 
 ## Demo
 
@@ -33,13 +33,13 @@ To run tests, run the following command
 Clone the project
 
 ```bash
-  git clone git@github.com:adioss/secret-eureka.git
+  git clone git@github.com:adioss/unconcealment.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd secret-eureka
+  cd unconcealment
 ```
 
 Install poetry and install dependencies
@@ -52,7 +52,7 @@ Install poetry and install dependencies
 Start
 
 ```bash
-  poetry run python secret_eureka/main.py 
+  poetry run python unconcealment/main.py 
 ```
 
 ## Documentation
