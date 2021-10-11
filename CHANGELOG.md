@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2021-10-11)
+### Feature
+* Return the founded value instead of boolean ([`abdbb03`](https://github.com/adioss/unconcealment/commit/abdbb03466381eb1135c6c602e04115af8fe7cad))
+
 ## v0.5.0 (2021-10-03)
 ### Feature
 * Rename project (from secret_eureka to unconcealment) ([`a0e7b17`](https://github.com/adioss/secret-eureka/commit/a0e7b1731b8629b8de7151da6f0136bc5f864866))
