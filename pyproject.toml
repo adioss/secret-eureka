@@ -14,7 +14,7 @@ pylint = "^2.11.1"
 safety = "^1.10.3"
 bandit = "^1.7.0"
 mypy = "^0.910"
-coverage = "^5.5"
+coverage = "^6.0.1"
 
 [tool.semantic_release]
 version_variable = ["unconcealment/__init__.py:__version__", "pyproject.toml:version"]

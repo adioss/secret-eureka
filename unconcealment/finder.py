@@ -1,21 +1,24 @@
-from typing import Final
+from typing import Final, Optional
 
 from unconcealment.secret_pattern import SecretPattern
 
 MAX_TESTED_LENGTH: Final = 5000
 
 
-def contains_secret_pattern(tested: str, secret_pattern: SecretPattern) -> bool:
+def extract_secret(tested: str, secret_pattern: SecretPattern) -> Optional[str]:
     """ Check if a string contains a secret using regexp"""
     if len(tested) == 0:
-        return False
+        return None
+    result = None
     for i in range(0, len(tested), MAX_TESTED_LENGTH):
         value = tested[i:i + MAX_TESTED_LENGTH]
         for inclusion in secret_pattern.value.inclusions:
-            result = inclusion.match(value)
-            if result is None:
-                return False
+            if inclusion.match(value) is None:
+                return None
+            search = inclusion.search(value)
+            result = search.group(1) if search is not None and len(search.groups()) >= 1 else tested
     for exclusion in secret_pattern.value.exclusions:
-        if exclusion.search(tested):
-            return contains_secret_pattern(exclusion.sub('', tested), secret_pattern)
-    return True
+        search = exclusion.search(tested)
+        if search:
+            return extract_secret(exclusion.sub('', tested), secret_pattern)
+    return result
