@@ -1,27 +1,13 @@
-name: Security
+name: Daily Checks
 
 on:
-  workflow_run:
-    workflows:
-      - 'Continuous Integration'
-    types:
-      - completed
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
-  find-secrets:
-    name: 'Find Secrets'
+  quality:
+    name: Quality
     runs-on: ubuntu-latest
-    if: (github.actor != 'dependabot[bot]') && (${{ github.event.workflow_run.conclusion == 'success' }})
-    steps:
-      - uses: actions/checkout@v2
-      - name: Find Secrets
-        uses: max/secret-scan@master
-        with:
-          exclude_path: '.github/workflows/configuration/exclude_paths.txt'
-  sast:
-    name: 'SAST'
-    runs-on: ubuntu-latest
-    if: (github.actor != 'dependabot[bot]') && (${{ github.event.workflow_run.conclusion == 'success' }})
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -34,16 +20,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-      - name: Run Bandit
+      - name: Lint with pylint
         run: |
-          poetry run bandit -r .
-      - name: Run Semgrep
-        uses: returntocorp/semgrep-action@v1
-        with:
-          config: >-
-            p/ci
-            p/security-audit
-            p/secrets
+          poetry run pylint */*.py
   sca:
     name: 'SCA'
     runs-on: ubuntu-latest
