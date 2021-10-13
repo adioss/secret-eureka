@@ -33,6 +33,10 @@ class DefaultFinderTestCase(unittest.TestCase):
             {
                 'value': ' TOTOJJBR3C4YPHOVBYCV ',
                 'expected': None
+            },
+            {
+                'value': 'ENV MANPATH=/build//share/man:',
+                'expected': None
             }
         ]
         for tested in tests:
@@ -46,7 +50,7 @@ class DefaultFinderTestCase(unittest.TestCase):
         # Given
         tests = [
             {'value': 'in /root/.aws/credential ', 'expected': None},
-            {'value': 'in /root/.aws/credentials ', 'expected': 'in /root/.aws/credentials '}
+            {'value': 'in /root/.aws/credentials ', 'expected': 'in /root/.aws/credentials'}
         ]
         for tested in tests:
             # When
@@ -186,5 +190,58 @@ class DefaultFinderTestCase(unittest.TestCase):
         for tested in tests:
             # When
             result = finder.extract_secret(tested['value'], finder.SecretPattern.NPM_TOKEN)
+            # Then
+            self.assertEqual(tested['expected'], result, f"Failed: {tested['value']}")
+
+    def test_contains_heroku_key_pattern(self):
+        """ test """
+        # Given
+        tests = [
+            {
+                'value': '/bin/sh -c apt-get install tmux && HEROKU_TOKEN=10211fef-fd5e-41ef-a49d-6b25e4df25d7 && sh',
+                'expected': '10211fef-fd5e-41ef-a49d-6b25e4df25d7'
+            }, {
+                'value': '/bin/sh -c apt-get -y install tmux &&    apt-get install -y gnupg2 &&   '
+                         ' curl https://cli-assets.heroku.com/install-ubuntu.sh | sh',
+                'expected': None
+            },
+        ]
+        for tested in tests:
+            # When
+            result = finder.extract_secret(tested['value'], finder.SecretPattern.HEROKU_KEY)
+            # Then
+            self.assertEqual(tested['expected'], result, f"Failed: {tested['value']}")
+
+    def test_contains_pipy_key_pattern(self):
+        """ test """
+        # Given
+        tests = [
+            {
+                'value': ' ENV PYPI_KEY = pypi-AgEIcHlwaS5vcmcCJGVhZWZjYmMfLTYzNDgtNDdhMi04NDFkLTkyOWNiODlkN2I3ZAACPnj'
+                         'icGVybWlzc2lvbnMiOiB7InByb2plY3RaIjogWyJ1bmNvbmNlYWxtZW50Il19LCAidmVyc2lvbiI6IDF9AAAGIJcb-'
+                         'aJdfJDLTHH0LEcyovcXfHk5i_zZtL3LeSxKpLZj ',
+                'expected': 'pypi-AgEIcHlwaS5vcmcCJGVhZWZjYmMfLTYzNDgtNDdhMi04NDFkLTkyOWNiODlkN2I3ZAACPnj'
+                            'icGVybWlzc2lvbnMiOiB7InByb2plY3RaIjogWyJ1bmNvbmNlYWxtZW50Il19LCAidmVyc2lvbiI6IDF9AAAGIJcb-'
+                            'aJdfJDLTHH0LEcyovcXfHk5i_zZtL3LeSxKpLZj'
+            },
+        ]
+        for tested in tests:
+            # When
+            result = finder.extract_secret(tested['value'], finder.SecretPattern.PIPY_KEY)
+            # Then
+            self.assertEqual(tested['expected'], result, f"Failed: {tested['value']}")
+
+    def test_contains_twitter_key_pattern(self):
+        """ test """
+        # Given
+        tests = [
+            {
+                'value': ' LABEL repo2docker.repo=https://github.com/robertICT/Webscrapping-Twitter',
+                'expected': None
+            },
+        ]
+        for tested in tests:
+            # When
+            result = finder.extract_secret(tested['value'], finder.SecretPattern.TWITTER_KEY)
             # Then
             self.assertEqual(tested['expected'], result, f"Failed: {tested['value']}")

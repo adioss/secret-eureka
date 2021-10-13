@@ -16,7 +16,7 @@ def extract_secret(tested: str, secret_pattern: SecretPattern) -> Optional[str]:
             if inclusion.match(value) is None:
                 return None
             search = inclusion.search(value)
-            result = search.group(1) if search is not None and len(search.groups()) >= 1 else tested
+            result = (search.group(1) if search is not None and len(search.groups()) >= 1 else tested).strip()
     for exclusion in secret_pattern.value.exclusions:
         search = exclusion.search(tested)
         if search:
