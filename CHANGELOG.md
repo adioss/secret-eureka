@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.1 (2021-10-13)
+### Fix
+* Correct regex related to aws secret, heroku, pipy, twitter(disabled) ([`87aaacd`](https://github.com/adioss/unconcealment/commit/87aaacdbbd6d44a531256e39ce5cc471e0b77d91))
+
 ## v0.6.0 (2021-10-11)
 ### Feature
 * Return the founded value instead of boolean ([`abdbb03`](https://github.com/adioss/unconcealment/commit/abdbb03466381eb1135c6c602e04115af8fe7cad))
