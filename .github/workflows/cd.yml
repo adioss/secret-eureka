@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows:
       - 'Security'
+      - 'Continuous Integration'
     branches:
       - main
     types:
