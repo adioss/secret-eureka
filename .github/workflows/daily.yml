@@ -26,7 +26,7 @@ jobs:
   sca:
     name: 'SCA'
     runs-on: ubuntu-latest
-    if: (github.actor != 'dependabot[bot]') && (${{ github.event.workflow_run.conclusion == 'success' }})
+    if: (github.actor != 'dependabot[bot]')
     steps:
       - name: Checkout
         uses: actions/checkout@v2
