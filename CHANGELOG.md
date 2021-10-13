@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.2 (2021-10-13)
+### Fix
+* Change log that prevent semgrep to run ([`c5d18cf`](https://github.com/adioss/unconcealment/commit/c5d18cfd182a79d9b8fc90743472dc1e86303d5a))
+
 ## v0.6.1 (2021-10-13)
 ### Fix
 * Correct regex related to aws secret, heroku, pipy ([`87aaacd`](https://github.com/adioss/unconcealment/commit/87aaacdbbd6d44a531256e39ce5cc471e0b77d91))
