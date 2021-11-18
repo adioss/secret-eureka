@@ -239,6 +239,10 @@ class DefaultFinderTestCase(unittest.TestCase):
                 'value': ' LABEL repo2docker.repo=https://github.com/robertICT/Webscrapping-Twitter',
                 'expected': None
             },
+            {
+                'value': ' ENTRYPOINT [\"java\" \"-jar\" \"/usr/local/app/twitter/lib/twitter.jar\"]"}',
+                'expected': None
+            },
         ]
         for tested in tests:
             # When

@@ -2,19 +2,19 @@
 
 ## Upgrade dependencies
 
-```
+```bash
 poetry update
 ```
 
 ## Build
 
-```
+```bash
 poetry build
 ```
 
 ## Deploy
 
-```
+```bash
 poetry deploy
 ```
 
@@ -44,12 +44,12 @@ Use https://www.conventionalcommits.org/en/v1.0.0/#summary
 * lint the code with pylint
 * enforce types using mypy
 
-```
-// lint
-poetry run pylint */*.py
-// mypy
-poetry run mypy */*.py
-// coverage
+```bash
+# lint
+poetry run pylint **/*.py
+# mypy
+poetry run mypy **/*.py
+# coverage
 poetry run coverage run -m unittest discover -p "test_*.py"
 poetry run coverage report -m
 poetry run coverage html
@@ -61,8 +61,8 @@ poetry run coverage html
 
 Detect potential security issues in 3rd parties
 
-```
-// run safety
+```bash
+# run safety
 poetry run safety check
 ```
 
@@ -70,10 +70,10 @@ poetry run safety check
 
 Find common security issues in Python code
 
-```
-// run bandit
+```bash
+# run bandit
 poetry run bandit -r .
 
-// run semgrep
+# run semgrep
 docker run --rm -v "${PWD}:/src" returntocorp/semgrep --config "p/ci"
 ```

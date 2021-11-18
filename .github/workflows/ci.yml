@@ -38,10 +38,10 @@ jobs:
           poetry install
       - name: Lint with pylint
         run: |
-          poetry run pylint */*.py
+          poetry run pylint **/*.py
       - name: Check types with mypy
         run: |
-          poetry run mypy */*.py
+          poetry run mypy **/*.py
       - name: Coverage with coverage
         run: |
           poetry run coverage run -m unittest discover -p "test_*.py"
