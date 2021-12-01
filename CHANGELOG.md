@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2021-12-01)
+### Feature
+* Add main method to parse command line string, file or folder ([`668173d`](https://github.com/adioss/unconcealment/commit/668173d416b2ae535fd80167509d5be606bdeaf6))
+
 ## v0.6.2 (2021-10-13)
 ### Fix
 * Change log that prevent semgrep to run ([`c5d18cf`](https://github.com/adioss/unconcealment/commit/c5d18cfd182a79d9b8fc90743472dc1e86303d5a))
