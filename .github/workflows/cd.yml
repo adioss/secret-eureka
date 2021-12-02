@@ -32,8 +32,7 @@ jobs:
     name: 'Push to dockerhub'
     needs: create-release
     runs-on: ubuntu-latest
-    if: ${{ false }}
-    #if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -59,6 +58,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: adioss/changeme:latest
+          tags: adioss/unconcealment:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache

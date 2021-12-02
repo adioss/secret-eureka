@@ -40,11 +40,11 @@ def convert_to_json(sensitive_data):
 def main():
     """ main """
     parser = argparse.ArgumentParser(description='Detect secrets (AWS, GCP or AZURE keys, NPM tokens etc...)')
-    parser.add_argument('-f', '--file', type=str, required=False, help='Input file')
-    parser.add_argument('-d', '--directory', type=str, required=False, help='Input directory')
+    parser.add_argument('-f', '--file', type=str, required=False, help='input file')
+    parser.add_argument('-d', '--directory', type=str, required=False, help='input directory')
     parser.add_argument('-l', '--log-level', default=logging.INFO, type=lambda x: getattr(logging, x),
-                        help="Configure the logging level.")
-    parser.add_argument('remainder', nargs=argparse.REMAINDER)
+                        help="configure the logging level.")
+    parser.add_argument('remainder', nargs=argparse.REMAINDER, help="input from stdin")
     Config.init(parser)
     logging.debug("Starting the application: %s, %s", Config.log_level(), Config.data())
     sensitive_data = []

@@ -10,14 +10,34 @@ Tool to detect secrets (AWS, GCP or AZURE keys, NPM tokens etc...)
 [![cd](https://github.com/adioss/unconcealment/actions/workflows/cd.yml/badge.svg)](https://github.com/adioss/unconcealment/actions/workflows/cd.yml)
 [![security](https://github.com/adioss/unconcealment/actions/workflows/security.yml/badge.svg)](https://github.com/adioss/unconcealment/actions/workflows/security.yml)
 
-## Demo
-
-TODO
-
 ## Usage/Examples
 
-```python
+```bash
+# help 
+docker run -ti --rm adioss/unconcealment:latest -h                                             
+usage: main.py [-h] [-f FILE] [-d DIRECTORY] [-l LOG_LEVEL] ...
 
+Detect secrets (AWS, GCP or AZURE keys, NPM tokens etc...)
+
+positional arguments:
+  remainder                             input from stdin
+
+optional arguments:
+  -h, --help                            show this help message and exit
+  -f FILE, --file FILE                  input file
+  -d DIRECTORY, --directory DIRECTORY   input directory
+  -l LOG_LEVEL, --log-level LOG_LEVEL   configure the logging level.
+```
+
+### Samples
+
+```bash
+# using input from stdin
+docker run -ti --rm adioss/unconcealment:latest here some text that contains secrets like "ENV AWS_SECRET_ACCESS_KEY=4FcmDrL8tJ7jx8poyV0L5GOVqabM/abdefHQREOH"
+# using file as input
+docker run -ti --rm -v ${PWD}:/mnt adioss/unconcealment:latest -f /mnt/anyfile.txt
+# using files as input from directory (recursive)
+docker run -ti --rm -v ${PWD}:/mnt adioss/unconcealment:latest -f /mnt
 ```
 
 ## Running Tests
