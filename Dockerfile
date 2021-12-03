@@ -2,7 +2,7 @@ FROM python:3.8-buster
 RUN addgroup --gid 1000 unconcealment
 RUN useradd -u 1000 -g 1000 unconcealment
 RUN mkdir /home/unconcealment
-COPY unconcealment /home/unconcealment
+COPY unconcealment /home/unconcealment/unconcealment
 
 WORKDIR /home/unconcealment
 
