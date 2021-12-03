@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.7.1 (2021-12-03)
+### Fix
+* Docker image badly configured ([`3b02ede`](https://github.com/adioss/unconcealment/commit/3b02edec96a019d7d7150acce0c20d210060866d))
+
 ## v0.7.0 (2021-12-01)
 ### Feature
 * Add main method to parse command line string, file or folder ([`668173d`](https://github.com/adioss/unconcealment/commit/668173d416b2ae535fd80167509d5be606bdeaf6))

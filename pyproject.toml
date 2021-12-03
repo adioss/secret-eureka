@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "unconcealment"
-version = "0.7.0"
+version = "0.7.1"
 description = "unconcealment"
 authors = ["adioss <adrien.pailhes@outlook.com>"]
 license = "GPLv3"
